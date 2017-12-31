@@ -6,7 +6,7 @@ Want to start Want to start your own wallet to start accepting and managing cash
 Clone the repo and have fun.
 
 
-<img src="screenshots/wallet.png" width="350">
+<img src="screenshots/wallet.png">
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
