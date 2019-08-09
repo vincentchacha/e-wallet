@@ -38,7 +38,7 @@ class ClientLoginController extends Controller
         ]);
         if (auth()->guard('client')->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]))
         {
-            \Session::put('success','Successfully Logged In')
+            \Session::put('success','Successfully Logged In');
             return redirect()->route('dashboard');
         }else{
             dd('your username and password are wrong.');

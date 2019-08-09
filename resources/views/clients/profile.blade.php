@@ -31,6 +31,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">API Secret Key</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control" name="key" value="{{$client->secret_key}}" id="inputEmail1" placeholder="Secret Key" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <div class="col-lg-offset-2 col-lg-10">
                                             <button type="submit" class="btn btn-primary">UPDATE PROFILE</button>
                                         </div>

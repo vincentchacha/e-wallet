@@ -1,4 +1,3 @@
-
 <?php 
 return array(
 /** set your paypal credential **/

@@ -14,7 +14,7 @@ class Client extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'names', 'email','contact', 'password',
+        'names', 'email','contact', 'password','secret_key',
     ];
     /**
      * The attributes that should be hidden for arrays.

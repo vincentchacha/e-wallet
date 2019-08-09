@@ -18,6 +18,7 @@
 //     Route::post('admin/login', ['as'=>'admin.auth','uses'=>'AdminLoginController@adminAuth']);
 // });
 
+Route::post('api/v1/authenticate', 'APIController@login');
     Route::get('login', 'ClientAuthController@getClientLogin');
     Route::get('register', [
         'as'=>'register',
@@ -97,6 +98,8 @@ Route::group(['middleware' => ['client']], function () {
         'as' => 'status',
         'uses' => 'PaypalController@getPaymentStatus',
     ));
+
+
 
     });
 

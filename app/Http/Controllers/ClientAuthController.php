@@ -48,6 +48,19 @@ class ClientAuthController extends Controller
         if (auth()->guard('client')->user()) return redirect()->route('dashboard');
         return view('clients/register');
     }
+
+    public function generate_string($strength = 16) {
+        $input = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $input_length = strlen($input);
+        $random_string = '';
+        for($i = 0; $i < $strength; $i++) {
+            $random_character = $input[mt_rand(0, $input_length - 1)];
+            $random_string .= $random_character;
+        }
+     
+        return $random_string;
+    }
+
     public function clientRegister(Request $request)
     {
         $this->validate($request, [
@@ -56,7 +69,15 @@ class ClientAuthController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        $client = Client::create(request(['names', 'contact','email', 'password']));
+        $secret_key = $this->generate_string(30);
+        // $client = Client::create(request(['names', 'contact','email', 'password']));
+        $client = new Client();
+        $client->names = $request->names;
+        $client->contact=$request->contact;
+        $client->email = $request->email;
+        $client->password=$request->password;
+        $client->secret_key = $secret_key;
+        $client->save();
         $account = new Account();
         $account->client_id=$client->id;
         $account->balance=0.00;
