@@ -1,8 +1,11 @@
 <?php 
 return array(
 /** set your paypal credential **/
-'client_id' =>'YOUR_PAYPAL_CLIENT_ID',
-'secret' => 'YOUR_PAYPAL_CLIENT_SECRET',
+
+
+//TODO:Racheal=> Remember to Transfer this to .env file
+'client_id' =>'Ab7Aif-97DE7MTTex5xV_pVu9LRCoXlcUlpGlkILmnQE6gu7i8wiiBtm3ErHDiEtp5Gf_KMXhfX4NWw6',
+'secret' => 'EDXYRLQFxl_Od-PNFRDEknrdiyukSQHoGXcaQlJjioEkiVnXPgsjptXGhlPHsOB_5TyflL0i_NoE-UJH',
 /**
 * SDK configuration 
 */

@@ -24,7 +24,7 @@ class APIController extends Controller
 
 
         $credentials = $request->only('email', 'password');
-        $credentials = array_add($credentials, 'secret_key', $request->secret_key);
+        // $credentials = array_add($credentials, 'secret_key', $request->secret_key);
         try {
             \Config::set('jwt.user', 'App\Client');
             \Config::set('auth.providers.users.model', \App\Client::class);

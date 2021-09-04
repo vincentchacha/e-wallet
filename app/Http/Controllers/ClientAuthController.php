@@ -69,14 +69,14 @@ class ClientAuthController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        $secret_key = $this->generate_string(30);
+        // $secret_key = $this->generate_string(30);
         // $client = Client::create(request(['names', 'contact','email', 'password']));
         $client = new Client();
         $client->names = $request->names;
         $client->contact=$request->contact;
         $client->email = $request->email;
         $client->password=$request->password;
-        $client->secret_key = $secret_key;
+        // $client->secret_key = $secret_key;
         $client->save();
         $account = new Account();
         $account->client_id=$client->id;

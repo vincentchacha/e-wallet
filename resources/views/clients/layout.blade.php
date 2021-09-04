@@ -16,6 +16,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{asset ('client/css/style.css')}}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet"> 
     
     <!-- css for this page -->
     <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
@@ -32,6 +33,7 @@
 </head>
 <body>
     <!-- start:wrapper -->
+    <div id="app">
     <div id="wrapper">
         <div class="header-top">
             <!-- start:navbar -->
@@ -234,6 +236,7 @@
         <!-- end:footer -->
 
     </div>
+    </div>
     <!-- end:wrapper -->
 
 	<!-- start:javascript -->
@@ -290,8 +293,9 @@
     </script>
     <!-- end:javascript for this page -->
     @yield('scripts')
-
+    <script src="{{ mix('/js/app.js') }}"></script> 
 </body>
+
 
 <!-- Mirrored from bootemplates.com/themes/srikandi/v2/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Dec 2017 16:15:27 GMT -->
 </html>	
